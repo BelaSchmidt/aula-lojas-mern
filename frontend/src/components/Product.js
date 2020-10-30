@@ -3,13 +3,7 @@ import Ratings from '../components/Ratings';
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const [produtos, setProdutos] = useState([]);
-
 const Product = ({ product }) => {
-  useEffect(() => {
-    console.log('oi mudei!');
-  }, []);
-
   return (
     <Card className='rounded my-3 p-3'>
       <Link to={`/product/${product._id}`}>
@@ -18,7 +12,6 @@ const Product = ({ product }) => {
       <Card.Body>
         <Link>
           <Card.Title>
-            {produtos}
             <strong>{product.name}</strong>
           </Card.Title>
         </Link>

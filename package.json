@@ -1,0 +1,23 @@
+{
+  "name": "lojas-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BelaSchmidt/lojas-mern.git"
+  },
+  "author": "Bela Schmidt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BelaSchmidt/lojas-mern/issues"
+  },
+  "homepage": "https://github.com/BelaSchmidt/lojas-mern#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

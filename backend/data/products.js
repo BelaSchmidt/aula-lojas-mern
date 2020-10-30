@@ -1,3 +1,5 @@
+const { builtinModules } = require('module');
+
 const products = [
   {
     _id: '1',
@@ -46,7 +48,7 @@ const products = [
       'The ultimate home entertainment center starts with PlayStation. Whether you are into gaming, HD movies, television, music',
     brand: 'Sony',
     category: 'Electronics',
-    price: 2499.90,
+    price: 2499.9,
     countInStock: 11,
     rating: 5,
     numReviews: 12,
@@ -72,11 +74,12 @@ const products = [
       'Meet Echo Dot - Our most popular smart speaker with a fabric design. It is our most compact smart speaker that fits perfectly into small space',
     brand: 'Amazon',
     category: 'Electronics',
-    price: 299.90,
+    price: 299.9,
     countInStock: 0,
     rating: 4,
     numReviews: 12,
   },
-]
+];
 
-export default products
+module.exports = products;
+// export default products
