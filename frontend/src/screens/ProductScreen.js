@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap';
 import Ratings from '../components/Ratings';
-import products from '../../../backend/data/products';
+import axios from 'axios';
+// import products from '../../../backend/data/products';
 
 const ProductScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id);
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const { data } = await axios.get(`/api/products/${match.params.id}`);
+      setProduct(data);
+    };
+
+    fetchProduct();
+
+    // para parar com o "missing dependecy", é so adicionar o match as depencias do effect => []
+  }, [match]);
+
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
